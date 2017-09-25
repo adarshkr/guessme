@@ -23,7 +23,7 @@ First, let's take a look at the [config.toml](//github.com/adarshkr/guessme/blob
 
 ### Language
 
-Available translations are in the `/i18n` directory. You can configure the language modifying the following key.
+Available translations are in the `data/translations/` directory. You can configure the language modifying the following key.
 
 ```toml
 defaultContentLanguage = "en"
