@@ -17,9 +17,9 @@ archetypeDir = "themes/guessme/archetypes"
 # Pagination
 paginate =  10
 
-MetaDataFormat = "toml",
+MetaDataFormat = "toml"
 
-rootlink = "/",
+rootlink = "/"
 
 [params]
 
@@ -27,10 +27,10 @@ rootlink = "/",
     # most longer texts.
 
     # Translations path (ex: data/translations/en-us.yaml)
-	locale: "en-us"
+	locale = "en-us"
 
 	# Logo path
-	logoPath: "images/someimage.png" 
+	logoPath = "images/someimage.png" 
 
 	# Custom assets
 	custom_css = []
