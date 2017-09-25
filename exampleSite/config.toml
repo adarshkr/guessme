@@ -1,0 +1,49 @@
+baseURL = "http://example.com/"
+
+languageCode = "en-us"
+
+# Default Language: Missing translations will default to this content language
+defaultContentLanguage = "en-us"
+
+# Website Title
+title = "Guess Me"
+
+# Theme Name
+theme = "guessme"
+
+# Archetypes used to generate the post; Defaults to theme archetypes
+archetypeDir = "themes/guessme/archetypes"
+
+# Pagination
+paginate =  10
+
+MetaDataFormat = "toml",
+
+rootlink = "/",
+
+[params]
+
+    # You can use Markdown syntax for urls [text](//url.to/source) for
+    # most longer texts.
+
+    # Translations path (ex: data/translations/en-us.yaml)
+	locale: "en-us"
+
+	# Logo path
+	logoPath: "images/someimage.png" 
+
+	# Custom assets
+	custom_css = []
+	custom_js  = []
+
+	# Page Description
+	description = ''
+    
+    # Page Author
+	author = ''
+
+
+# Enable this to make all relative URLs relative to content root. Note that this does not affect absolute URLs.
+canonifyurls = true 
+
+

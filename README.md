@@ -19,7 +19,7 @@ After installing the Guessme Theme successfully it requires a just a few more st
 
 ### The config file
 
-First, let's take a look at the [config.toml](//github.com/adarshkr/guessme.git/exampleSite/config.toml). It will be useful to learn how to customize your site. Feel free to play around with the settings.
+First, let's take a look at the [config.toml](//github.com/adarshkr/guessme/blob/master/exampleSite/config.toml). It will be useful to learn how to customize your site. Feel free to play around with the settings.
 
 ### Language
 

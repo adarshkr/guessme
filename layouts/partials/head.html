@@ -2,14 +2,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="author" content="{{ with .Site.Params.author }}{{ . }}{{ end }}">
-{{ if .Description }}
-<meta name="description" content="{{ .Description }}">
-{{ else }}
-<meta name="description" content="{{ with .Site.Params.description }}{{ . }}{{ end }}">
+
+{{ with .Site.Params.description }}
+   <meta name="description" content="{{ . }}">
 {{ end }}
+
+{{ with .Site.Params.author }}
+    <meta name="author" content="{{ . }}">
+{{ end }}
+
 <title>{{ .Title }}</title>
-{{ partial "highlightjs.html" }}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/pojoaque.min.css">
+
 <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet" type="text/css">
 <link  href="{{ .Site.BaseURL }}css/theme.min.css" rel="stylesheet" type="text/css">
 <link  href="{{ .Site.BaseURL }}css/custom.css" rel="stylesheet" type="text/css">
 
+{{ range .Site.Params.custom_css }}
+    <link rel="stylesheet" href="{{ . | absURL }}">
+{{ end }}
