@@ -18,7 +18,7 @@
     <div id="last-posts" class="open">
         <h3 data-open="last-posts">{{ ( index $.Site.Data.translations $.Site.Params.locale ).mostrecentposts }}</h3>
         <ul>
-            {{ range first 10 .Site.RegularPages }}
+            {{ range (where .Data.Pages "Type" "posts").ByDate }}
                <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
             {{ end }}
         </ul>
