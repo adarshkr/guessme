@@ -1,17 +1,9 @@
-{{ define "header" }}
-  {{ partial "menu.html" . }}
-{{ end }}
-{{ define "main" }}
+{{ partial "header.html" . }}
   <header>
     <h1>{{ .Title }}</h1>
   </header>
-  <ul class="tags">
-  {{ range ($.Site.GetPage "taxonomyTerm" "tags").Pages }}
-   <li><a href="{{ .Permalink }}">{{ .Title}}</a></li>
+   {{ range (.Paginate (where .Data.Pages "Type" "posts")).Pages }}
+    {{ partial "page-summary.html" . }}
   {{ end }}
-</ul>
-{{ end }}
-{{ define "footer" }}
   {{ partial "pagination.html" . }}
-  {{ partial "powered-by.html" . }}
-{{ end }}
+  {{ partial "footer.html" . }}

@@ -1,6 +1,7 @@
 .page-container .logo {
     margin: 10px auto;
     width: 70%;
+    display: block;
 }
 .page-container .logo img{ 
     width: 50px;

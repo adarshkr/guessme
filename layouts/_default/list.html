@@ -1,15 +1,12 @@
-{{ define "header" }}
-  {{ partial "menu.html" . }}
-{{ end }}
-{{ define "main" }}
+{{ partial "header.html" . }}
+
   <header>
     <h1>{{ .Title }}</h1>
   </header>
-  {{ range .Paginator.Pages }}
+  
+  {{ range (.Paginate (where .Data.Pages "Type" "posts")).Pages }}
     {{ partial "page-summary.html" . }}
   {{ end }}
-{{ end }}
-{{ define "footer" }}
-  {{ partial "pagination.html" . }}
-  {{ partial "powered-by.html" . }}
-{{ end }}
+
+{{ partial "pagination.html" . }}
+{{ partial "footer.html" . }}

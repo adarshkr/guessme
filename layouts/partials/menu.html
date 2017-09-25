@@ -1,11 +1,11 @@
 <nav class="col-md-3">
     
-      <div class="logo clearfix">
+      <a class="logo clearfix" href="{{ .Site.BaseURL }}">
         {{ if .Site.Params.logoPath }} 
             <img src="{{ .Site.BaseURL }}/{{.Site.Params.logoPath}}" /> 
         {{ end }}
         <h2>{{ .Site.Title }}</h2>
-      </div>
+      </a>
      <!--<div id="last-posts" class="open">
         <h3 data-open="last-posts">{{ ( index $.Site.Data.translations $.Site.Params.locale ).pages }}</h3>
             {{ range .Data.Pages }}
