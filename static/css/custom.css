@@ -22,3 +22,12 @@ code {
 p {
 	line-height: 22px
 }
+.content h2 {
+    margin: 0;
+    font-size: 1em
+}
+
+.content h1 {
+    margin-bottom: 0;
+
+}
