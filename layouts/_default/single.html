@@ -1,6 +1,8 @@
 {{ partial "header.html" . }}
 
   <h1>{{ .Title }}</h1>
-  {{ .Content }}
+  <div class="single-page">
+    {{ .Content }}
+  </div>
 
 {{ partial "footer.html" . }}

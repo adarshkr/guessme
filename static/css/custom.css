@@ -19,15 +19,19 @@ code {
     padding: 0.2em 0.5em;
     margin: 0 0.1em;
 }
-p {
-	line-height: 22px
-}
-.content h2 {
+
+h2.posted-date {
     margin: 0;
     font-size: 1em
 }
 
-.content h1 {
+h1.post-title {
     margin-bottom: 0;
-
+}
+.content header h2 {
+    margin-bottom: 0;
+}
+.content p.muted {
+    margin-top: 5px;
+    font-size: 1em
 }
