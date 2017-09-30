@@ -24,26 +24,30 @@
         </ul>
     </div>
 
-    {{ with .Site.Taxonomies.tags }}
-    <div id="tags" class="open">
-        <h3 data-open="tags">{{ ( index $.Site.Data.translations $.Site.Params.locale ).tags }}</h3>
-        <ul class="tags">
-            {{ range $name, $taxonomy := . }}
-            <li><a href="/tags/{{ $name | urlize }}">{{ $name }}</a></li>
-            {{ end }}
-        </ul>
-    </div>
+    {{if .Site.Params.showTags}}
+        {{ with .Site.Taxonomies.tags }}
+        <div id="tags" class="open">
+            <h3 data-open="tags">{{ ( index $.Site.Data.translations $.Site.Params.locale ).tags }}</h3>
+            <ul class="tags">
+                {{ range $name, $taxonomy := . }}
+                <li><a href="/tags/{{ $name | urlize }}">{{ $name }}</a></li>
+                {{ end }}
+            </ul>
+        </div>
+        {{ end }}
     {{ end }}
 
-    {{ with .Site.Taxonomies.categories }}
-    <div id="categories" class="open">
-        <h3 data-open="categories">{{ ( index $.Site.Data.translations $.Site.Params.locale ).categories }}</h3>
-        <ul class="categories">
-            {{ range $name, $taxonomy := . }}
-            <li><a href="/categories/{{ $name | urlize }}">{{ $name }}</a></li>
-            {{ end }}
-        </ul>
-    </div>
+    {{if .Site.Params.showCategories}}
+        {{ with .Site.Taxonomies.categories }}
+        <div id="categories" class="open">
+            <h3 data-open="categories">{{ ( index $.Site.Data.translations $.Site.Params.locale ).categories }}</h3>
+            <ul class="categories">
+                {{ range $name, $taxonomy := . }}
+                <li><a href="/categories/{{ $name | urlize }}">{{ $name }}</a></li>
+                {{ end }}
+            </ul>
+        </div>
+        {{ end }}
     {{ end }}
 
 </nav>

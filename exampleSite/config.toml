@@ -42,6 +42,12 @@ rootlink = "/"
     # Page Author
 	author = ''
 
+	# Show Categories List on Sidebar
+	showCategories = true
+
+	# Show Tags List on Sidebar
+	showTags = true
+
 
 # Enable this to make all relative URLs relative to content root. Note that this does not affect absolute URLs.
 canonifyurls = true 
