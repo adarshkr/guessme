@@ -35,3 +35,10 @@ h1.post-title {
     margin-top: 5px;
     font-size: 1em
 }
+.single-page h4 {
+    margin-bottom: 5px;
+}
+
+.single-page h4 + p,  .single-page h3 + p{
+    margin-top: 5px;
+}
